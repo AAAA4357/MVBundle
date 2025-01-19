@@ -1,0 +1,32 @@
+package MVPlot.Proto;
+
+message PlotProject {
+	required bytes Name = 1;
+	repeated Plot Plots = 2;
+}
+
+message Plot {
+	required bytes PlotName = 1;
+	required string ID = 2;
+	repeated string Conditions = 3;
+	repeated PlotRow Rows = 4;
+}
+
+enum PlotConditionRowType {
+	Variable = 0;
+	Switch = 1;
+}
+
+message PlotRow {
+	required PlotRowType Type = 1;
+	repeated bytes Content = 2;
+}
+
+enum PlotRowType {
+	Normal = 0;
+	Narrator = 1;
+	Bubble = 2;
+	SE = 3;
+	ShakeScreen = 4;
+	ChangeBGM = 5;
+}

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WelcomeWindow_WindowTitle" xml:space="preserve">
+    <value>Welcome to MVPlot</value>
+  </data>
+  <data name="WelcomeWindow_Title" xml:space="preserve">
+    <value>MVPlot - A plot editor for the RPG Maker MV's games</value>
+  </data>
+  <data name="WelcomeWindow_NewProject" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="WelcomeWindow_OpenProject" xml:space="preserve">
+    <value>Open Project</value>
+  </data>
+  <data name="CreatePlotProject_WindowTitle" xml:space="preserve">
+    <value>CreateNewPlotProject</value>
+  </data>
+  <data name="CreatePlotProject_ProjectNameInput" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="PlotProjectCreation_CreateWarning" xml:space="preserve">
+    <value>Target file exists.Would you like to overwrite it?</value>
+  </data>
+  <data name="MainEditWindow_WindowTitle" xml:space="preserve">
+    <value>Plot Project - {0}</value>
+  </data>
+  <data name="MainEditWindow_NoPlotHint" xml:space="preserve">
+    <value>No Plot Yet.Press the button below to add one.</value>
+  </data>
+  <data name="MainEditWindow_NewPlot" xml:space="preserve">
+    <value>New Plot</value>
+  </data>
+  <data name="CreatePlot_PlotName_WindowTitle" xml:space="preserve">
+    <value>Enter name</value>
+  </data>
+  <data name="CreatePlot_PlotName_Title" xml:space="preserve">
+    <value>Enter new plot name (Cannot modify)</value>
+  </data>
+  <data name="CreatePlot_PlotID_WindowTitle" xml:space="preserve">
+    <value>Enter ID</value>
+  </data>
+  <data name="CreatePlot_PlotID_Title" xml:space="preserve">
+    <value>Enter new plot ID (Cannot modify)</value>
+  </data>
+  <data name="CreatePlotProject_DefaultName" xml:space="preserve">
+    <value>NewPlotProject</value>
+  </data>
+  <data name="CreatePlot_DefaultName" xml:space="preserve">
+    <value>New Plot</value>
+  </data>
+  <data name="CreatePlot_PlotIDDuplicate" xml:space="preserve">
+    <value>Duplicate Plot ID!</value>
+  </data>
+  <data name="CreatePlot_PlotIDInvalid" xml:space="preserve">
+    <value>Invalid Plot ID! Make sure that ID only has English characters, numbers and '_'</value>
+  </data>
+  <data name="MainEditWindow_MenuFile" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="MainEditWindow_MenuSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="MainEditWindow_MenuCreate" xml:space="preserve">
+    <value>Create new</value>
+  </data>
+  <data name="MainEditWindow_MenuOpen" xml:space="preserve">
+    <value>Open existing</value>
+  </data>
+  <data name="MainEditWindow_MenuPlot" xml:space="preserve">
+    <value>Plot</value>
+  </data>
+  <data name="MainEditWindow_MenuCreatePlot" xml:space="preserve">
+    <value>Create new plot</value>
+  </data>
+  <data name="MainEditWindow_MenuDeletePlot" xml:space="preserve">
+    <value>Delete current plot</value>
+  </data>
+  <data name="MainEditWindow_MenuEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="MainEditWindow_MenuUndo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="MainEditWindow_MenuRedo" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="MainEditWindow_MenuCut" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="MainEditWindow_MenuCopy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="MainEditWindow_MenuPaste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="MainEditWindow_MenuSelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="MainEditWindow_MenuFind" xml:space="preserve">
+    <value>Find ...</value>
+  </data>
+  <data name="MainEditWindow_MenuExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="MainEditWindow_MenuExportMVEdit" xml:space="preserve">
+    <value>Export to MVEdit</value>
+  </data>
+  <data name="MainEditWindow_MenuHelp" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MainEditWindow_MenuAbout" xml:space="preserve">
+    <value>About MVPlot</value>
+  </data>
+  <data name="MainEditWindow_MenuUsage" xml:space="preserve">
+    <value>Usage</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Overwrite" xml:space="preserve">
+    <value>Overwrite</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Move" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_MoveForward" xml:space="preserve">
+    <value>Move forward</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_MoveBackward" xml:space="preserve">
+    <value>Move backward</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_MoveForwardTo" xml:space="preserve">
+    <value>Move forward to ...</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_MoveBackwardTo" xml:space="preserve">
+    <value>Move backward to ...</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Cut" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_CopyContent" xml:space="preserve">
+    <value>Copy content</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_CopyRow" xml:space="preserve">
+    <value>Copy row</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_OverwritePaste" xml:space="preserve">
+    <value>Paste with overwrite</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_InsertPaste" xml:space="preserve">
+    <value>Paste with insert</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Multiselect" xml:space="preserve">
+    <value>Multiselect</value>
+  </data>
+  <data name="MainEditWindow_MenuClose" xml:space="preserve">
+    <value>Close current</value>
+  </data>
+  <data name="MainEditWindow_DeletePlotAsk" xml:space="preserve">
+    <value>Are you sure for deleting this plot?</value>
+  </data>
+  <data name="MainEditWindow_AboutWindowTitle" xml:space="preserve">
+    <value>About MVPlot</value>
+  </data>
+  <data name="MainEditWindow_UsageWindowTitle" xml:space="preserve">
+    <value>Usage</value>
+  </data>
+  <data name="MainEditWindow_SelectPlotHint" xml:space="preserve">
+    <value>Select a plot at left to start.</value>
+  </data>
+  <data name="MainEditWindow_MainSender_NormalPlotRowTitle" xml:space="preserve">
+    <value>Normal plot row</value>
+  </data>
+  <data name="MainEditWindow_MainSender_NormalPlotRowNameTitle" xml:space="preserve">
+    <value>Character name (Empty for narrator row)</value>
+  </data>
+  <data name="MainEditWindow_MainSender_NormalPlotRowContentTitle" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowTitle" xml:space="preserve">
+    <value>Additional plot row</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowTypeTitle" xml:space="preserve">
+    <value>Row type</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowType1" xml:space="preserve">
+    <value>SE</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowType2" xml:space="preserve">
+    <value>Bubble</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowContentTitle" xml:space="preserve">
+    <value>Additional arguments(File name)</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowTitle" xml:space="preserve">
+    <value>Action plot row</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowTypeTitle" xml:space="preserve">
+    <value>Action type</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowType1" xml:space="preserve">
+    <value>Shake screen</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowType2" xml:space="preserve">
+    <value>Change BGM</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowContentTitle" xml:space="preserve">
+    <value>Action argument(Fill it out in the format)</value>
+  </data>
+  <data name="MainEditWindow_MainSenderSend" xml:space="preserve">
+    <value>Append</value>
+  </data>
+  <data name="MainEditWindow_FindWindowTitle" xml:space="preserve">
+    <value>Search next ...</value>
+  </data>
+  <data name="MainEditWindow_FindTitle" xml:space="preserve">
+    <value>Search query</value>
+  </data>
+  <data name="MainEditWindow_FindNothing" xml:space="preserve">
+    <value>Nothing found.</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_AppendPaste" xml:space="preserve">
+    <value>Paste with append</value>
+  </data>
+  <data name="SelectSaveLocation" xml:space="preserve">
+    <value>Select a location to save</value>
+  </data>
+  <data name="OpenExisting" xml:space="preserve">
+    <value>Select a existing project</value>
+  </data>
+  <data name="SelectFilter" xml:space="preserve">
+    <value>MV Plot Project(*.mpproj)|*.mpproj</value>
+  </data>
+  <data name="ByteString2StringType1" xml:space="preserve">
+    <value>Normal dialogue, Speaker: {0}, Content: {1}</value>
+  </data>
+  <data name="ByteString2StringType2" xml:space="preserve">
+    <value>Narrator dialogue, Content: {0}</value>
+  </data>
+  <data name="ByteString2StringType6" xml:space="preserve">
+    <value>Play BGM: {0}</value>
+  </data>
+  <data name="ByteString2StringType5" xml:space="preserve">
+    <value>Shake screen, Intensity: {0}, Speed: {1}, Duration: {2} frames</value>
+  </data>
+  <data name="ByteString2StringType4" xml:space="preserve">
+    <value>Play sound effect: {0}</value>
+  </data>
+  <data name="ByteString2StringType3" xml:space="preserve">
+    <value>Play bubble: {0}</value>
+  </data>
+  <data name="MainEditWindow_MenuInsertCondition" xml:space="preserve">
+    <value>Insert plot condition</value>
+  </data>
+  <data name="MainEditWindow_ChangeConditionWindowTitle" xml:space="preserve">
+    <value>Insert condition</value>
+  </data>
+  <data name="MainEditWindow_ChangeConditionTitle" xml:space="preserve">
+    <value>Input new condition (Fill it out with form)</value>
+  </data>
+  <data name="MainEditWindow_ConditionInvalid" xml:space="preserve">
+    <value>Invalid condition form!</value>
+  </data>
+  <data name="MainEditWIndow_Conditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="MainEditWindow_MenuDeleteCondition" xml:space="preserve">
+    <value>Delete condition</value>
+  </data>
+</root>

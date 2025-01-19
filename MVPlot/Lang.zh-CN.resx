@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WelcomeWindow_Title" xml:space="preserve">
+    <value>MVPlot - 一款用于RPG Maker MV游戏的剧本编辑器</value>
+  </data>
+  <data name="WelcomeWindow_WindowTitle" xml:space="preserve">
+    <value>欢迎使用MVPlot</value>
+  </data>
+  <data name="WelcomeWindow_NewProject" xml:space="preserve">
+    <value>新建项目</value>
+  </data>
+  <data name="WelcomeWindow_OpenProject" xml:space="preserve">
+    <value>打开项目</value>
+  </data>
+  <data name="CreatePlotProject_WindowTitle" xml:space="preserve">
+    <value>新建剧本项目</value>
+  </data>
+  <data name="CreatePlotProject_ProjectNameInput" xml:space="preserve">
+    <value>项目名称</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="PlotProjectCreation_CreateWarning" xml:space="preserve">
+    <value>目标文件已存在，是否覆盖？</value>
+  </data>
+  <data name="MainEditWindow_WindowTitle" xml:space="preserve">
+    <value>剧本项目 - {0}</value>
+  </data>
+  <data name="MainEditWindow_NoPlotHint" xml:space="preserve">
+    <value>无剧本，点击下方按钮添加剧本。</value>
+  </data>
+  <data name="MainEditWindow_NewPlot" xml:space="preserve">
+    <value>新建剧本</value>
+  </data>
+  <data name="CreatePlot_PlotName_WindowTitle" xml:space="preserve">
+    <value>输入名称</value>
+  </data>
+  <data name="CreatePlot_PlotName_Title" xml:space="preserve">
+    <value>输入剧本名称（无法修改）</value>
+  </data>
+  <data name="CreatePlot_PlotID_WindowTitle" xml:space="preserve">
+    <value>输入ID</value>
+  </data>
+  <data name="CreatePlot_PlotID_Title" xml:space="preserve">
+    <value>输入剧本ID（无法修改）</value>
+  </data>
+  <data name="CreatePlotProject_DefaultName" xml:space="preserve">
+    <value>新建剧本项目</value>
+  </data>
+  <data name="CreatePlot_DefaultName" xml:space="preserve">
+    <value>新建剧本</value>
+  </data>
+  <data name="CreatePlot_PlotIDDuplicate" xml:space="preserve">
+    <value>重复的剧本ID！</value>
+  </data>
+  <data name="CreatePlot_PlotIDInvalid" xml:space="preserve">
+    <value>非法剧本ID！请确保ID只包含英文字符、数字以及'_'</value>
+  </data>
+  <data name="MainEditWindow_MenuFile" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="MainEditWindow_MenuSave" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="MainEditWindow_MenuCreate" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="MainEditWindow_MenuOpen" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="MainEditWindow_MenuPlot" xml:space="preserve">
+    <value>剧本</value>
+  </data>
+  <data name="MainEditWindow_MenuCreatePlot" xml:space="preserve">
+    <value>新建剧本</value>
+  </data>
+  <data name="MainEditWindow_MenuDeletePlot" xml:space="preserve">
+    <value>删除剧本</value>
+  </data>
+  <data name="MainEditWindow_MenuEdit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="MainEditWindow_MenuUndo" xml:space="preserve">
+    <value>撤回</value>
+  </data>
+  <data name="MainEditWindow_MenuRedo" xml:space="preserve">
+    <value>重做</value>
+  </data>
+  <data name="MainEditWindow_MenuCut" xml:space="preserve">
+    <value>剪切</value>
+  </data>
+  <data name="MainEditWindow_MenuCopy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="MainEditWindow_MenuPaste" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+  <data name="MainEditWindow_MenuSelectAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="MainEditWindow_MenuFind" xml:space="preserve">
+    <value>查找...</value>
+  </data>
+  <data name="MainEditWindow_MenuExport" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="MainEditWindow_MenuExportMVEdit" xml:space="preserve">
+    <value>导出至MVEdit</value>
+  </data>
+  <data name="MainEditWindow_MenuHelp" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="MainEditWindow_MenuAbout" xml:space="preserve">
+    <value>关于MVPlot</value>
+  </data>
+  <data name="MainEditWindow_MenuUsage" xml:space="preserve">
+    <value>使用方法</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Overwrite" xml:space="preserve">
+    <value>复写</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Insert" xml:space="preserve">
+    <value>插入</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Move" xml:space="preserve">
+    <value>移动</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_MoveForward" xml:space="preserve">
+    <value>前移</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_MoveBackward" xml:space="preserve">
+    <value>后移</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_MoveForwardTo" xml:space="preserve">
+    <value>前移至...</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_MoveBackwardTo" xml:space="preserve">
+    <value>后移至...</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Cut" xml:space="preserve">
+    <value>剪切</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_CopyContent" xml:space="preserve">
+    <value>复制内容</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_CopyRow" xml:space="preserve">
+    <value>复制整行</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Paste" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_OverwritePaste" xml:space="preserve">
+    <value>覆写粘贴</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_InsertPaste" xml:space="preserve">
+    <value>插入粘贴</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_Multiselect" xml:space="preserve">
+    <value>多选</value>
+  </data>
+  <data name="MainEditWindow_MenuClose" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="MainEditWindow_DeletePlotAsk" xml:space="preserve">
+    <value>是否确认删除该剧本？</value>
+  </data>
+  <data name="MainEditWindow_AboutWindowTitle" xml:space="preserve">
+    <value>关于 MVPlot</value>
+  </data>
+  <data name="MainEditWindow_UsageWindowTitle" xml:space="preserve">
+    <value>使用方法</value>
+  </data>
+  <data name="MainEditWindow_SelectPlotHint" xml:space="preserve">
+    <value>在左侧列表里选择一篇剧本以开始。</value>
+  </data>
+  <data name="MainEditWindow_MainSender_NormalPlotRowTitle" xml:space="preserve">
+    <value>普通对话行</value>
+  </data>
+  <data name="MainEditWindow_MainSender_NormalPlotRowNameTitle" xml:space="preserve">
+    <value>人物名称（留空为旁白）</value>
+  </data>
+  <data name="MainEditWindow_MainSender_NormalPlotRowContentTitle" xml:space="preserve">
+    <value>正文内容</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowTitle" xml:space="preserve">
+    <value>附加行</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowTypeTitle" xml:space="preserve">
+    <value>附加类型</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowType1" xml:space="preserve">
+    <value>音效</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowType2" xml:space="preserve">
+    <value>气泡</value>
+  </data>
+  <data name="MainEditWindow_MainSender_AdditionalPlotRowContentTitle" xml:space="preserve">
+    <value>附加参数（文件名）</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowTitle" xml:space="preserve">
+    <value>动作行</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowTypeTitle" xml:space="preserve">
+    <value>动作类型</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowType1" xml:space="preserve">
+    <value>震屏</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowType2" xml:space="preserve">
+    <value>更改BGM</value>
+  </data>
+  <data name="MainEditWindow_MainSender_ActionPlotRowContentTitle" xml:space="preserve">
+    <value>动作参数（按格式填写）</value>
+  </data>
+  <data name="MainEditWindow_MainSenderSend" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="MainEditWindow_FindWindowTitle" xml:space="preserve">
+    <value>查找下一个...</value>
+  </data>
+  <data name="MainEditWindow_FindTitle" xml:space="preserve">
+    <value>查找关键字</value>
+  </data>
+  <data name="MainEditWindow_FindNothing" xml:space="preserve">
+    <value>未找到行。</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="MainEditWindow_PlotRowList_AppendPaste" xml:space="preserve">
+    <value>添加粘贴</value>
+  </data>
+  <data name="SelectSaveLocation" xml:space="preserve">
+    <value>请选择项目保存位置</value>
+  </data>
+  <data name="OpenExisting" xml:space="preserve">
+    <value>请选择项目</value>
+  </data>
+  <data name="SelectFilter" xml:space="preserve">
+    <value>MV剧本项目(*.mpproj)|*.mpproj</value>
+  </data>
+  <data name="ByteString2StringType1" xml:space="preserve">
+    <value>普通对话，对话方：{0}, 对话内容：{1}</value>
+  </data>
+  <data name="ByteString2StringType2" xml:space="preserve">
+    <value>旁白对话, 对话内容：{0}</value>
+  </data>
+  <data name="ByteString2StringType3" xml:space="preserve">
+    <value>播放气泡：{0}</value>
+  </data>
+  <data name="ByteString2StringType4" xml:space="preserve">
+    <value>播放音效：{0}</value>
+  </data>
+  <data name="ByteString2StringType5" xml:space="preserve">
+    <value>震动屏幕，强度：{0}，速度：{1}，时间：{2}帧</value>
+  </data>
+  <data name="ByteString2StringType6" xml:space="preserve">
+    <value>播放BGM：{0}</value>
+  </data>
+  <data name="MainEditWindow_MenuInsertCondition" xml:space="preserve">
+    <value>插入剧本条件</value>
+  </data>
+  <data name="MainEditWindow_ChangeConditionWindowTitle" xml:space="preserve">
+    <value>插入条件</value>
+  </data>
+  <data name="MainEditWindow_ChangeConditionTitle" xml:space="preserve">
+    <value>输入新条件（按格式填写）</value>
+  </data>
+  <data name="MainEditWindow_ConditionInvalid" xml:space="preserve">
+    <value>非法条件格式！</value>
+  </data>
+  <data name="MainEditWIndow_Conditions" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="MainEditWindow_MenuDeleteCondition" xml:space="preserve">
+    <value>删除剧本条件</value>
+  </data>
+</root>
