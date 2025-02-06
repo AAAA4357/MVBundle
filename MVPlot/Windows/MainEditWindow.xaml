@@ -42,6 +42,7 @@
         <KeyBinding Key="U" Modifiers="Ctrl" Command="{Binding UsageCommand}"/>
         <KeyBinding Key="E" Modifiers="Ctrl+Shift" Command="{Binding InsertPlotConditionCommand}"/>
         <KeyBinding Key="R" Modifiers="Ctrl+Shift" Command="{Binding DeletePlotConditionCommand}"/>
+        <KeyBinding Key="Return" Modifiers="" Command="{Binding AddNormalPlotRowCommand}"/>
     </Window.InputBindings>
     <Window.Resources>
         <utils:XConverter x:Key="XConverter"/>
@@ -77,7 +78,7 @@
                 <ListView x:Name="PlotRowListView" Grid.Row="2" ItemsSource="{Binding PlotRowList}" SelectedItem="{Binding PlotRowListSelectedItem}" SelectedIndex="{Binding PlotRowListSelectedIndex}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="-61,0,0,0" VirtualizingPanel.IsVirtualizing="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Margin="5,4,4,4">
+                            <TextBlock TextWrapping="Wrap" Margin="5,4,4,4">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource PlotRow2String}">
                                         <Binding Path="Type"/>
@@ -184,7 +185,7 @@
                         <TextBlock Text="{Binding [MainEditWindow_MainSender_NormalPlotRowNameTitle],Source={x:Static managers:LanguageManager.Instance}}" FontSize="15" Margin="8,4"/>
                         <hc:TextBox Text="{Binding MainSender_NormalPlotRowName}" Margin="8,4" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
                         <TextBlock Text="{Binding [MainEditWindow_MainSender_NormalPlotRowContentTitle],Source={x:Static managers:LanguageManager.Instance}}" FontSize="15" Margin="8,4"/>
-                        <hc:TextBox Text="{Binding MainSender_NormalPlotRowContent, UpdateSourceTrigger=PropertyChanged}" Height="84" Margin="8,4" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Top" Padding="4"/>
+                        <hc:TextBox Text="{Binding MainSender_NormalPlotRowContent, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Height="84" Margin="8,4" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Top" Padding="4"/>
                         <Button Margin="8,4" HorizontalAlignment="Right" Content="{Binding [MainEditWindow_MainSenderSend],Source={x:Static managers:LanguageManager.Instance}}" Command="{Binding AddNormalPlotRowCommand}"/>
                         <Separator/>
                         <TextBlock Text="{Binding [MainEditWindow_MainSender_AdditionalPlotRowTitle],Source={x:Static managers:LanguageManager.Instance}}" FontSize="20" Margin="8,4"/>
