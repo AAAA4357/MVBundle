@@ -44,6 +44,7 @@ namespace MVPlot.Managers
             ProjectFileStream?.Close();
             ProjectFileStream?.Dispose();
             ProjectFileStream = null;
+            OperationManager.Clear();
             WindowManager.Close(nameof(MainEditWindow));
             WindowManager.Show(nameof(WelcomeWindow));
         }

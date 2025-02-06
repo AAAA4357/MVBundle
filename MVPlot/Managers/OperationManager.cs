@@ -2,21 +2,6 @@
 {
     public class OperationManager
     {
-        public static uint maxCapacity
-        {
-            get => 32;
-            set
-            {
-                uint capacity = 32;
-                if (capacity > value && value != 0 && Operations.Count > 0)
-                {
-                    Operations = (Stack<UserOperationBase>)Operations.Reverse();
-                    while (Operations.Count != capacity) Operations.Pop();
-                    Operations = (Stack<UserOperationBase>)Operations.Reverse();
-                }
-            }
-        }
-
         static Stack<UserOperationBase> Operations = new();
 
         static Stack<UserOperationBase> RedoOperations = new();
@@ -24,13 +9,6 @@
         public static void Add(UserOperationBase operation)
         {
             RedoOperations.Clear();
-            if (Operations.Count == maxCapacity)
-            {
-                List<UserOperationBase> operations = [.. Operations];
-                operations.RemoveAt(0);
-                Operations.Clear();
-                foreach (UserOperationBase userOperation in operations) Operations.Push(userOperation);
-            }
             Operations.Push(operation);
         }
 
@@ -48,6 +26,12 @@
             UserOperationBase operation = RedoOperations.Pop();
             operation.ReDO();
             Operations.Push(operation);
+        }
+
+        public static void Clear()
+        {
+            Operations.Clear();
+            RedoOperations.Clear();
         }
     }
 

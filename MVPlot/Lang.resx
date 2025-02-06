@@ -385,4 +385,7 @@
   <data name="MainEditWindow_MenuDeleteCondition" xml:space="preserve">
     <value>Delete condition</value>
   </data>
+  <data name="MainEditWindow_MenuFindRegex" xml:space="preserve">
+    <value>Find with regex...</value>
+  </data>
 </root>

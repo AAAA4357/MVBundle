@@ -556,6 +556,15 @@ namespace MVPlot {
         }
         
         /// <summary>
+        ///   查找类似 Find with regex... 的本地化字符串。
+        /// </summary>
+        public static string MainEditWindow_MenuFindRegex {
+            get {
+                return ResourceManager.GetString("MainEditWindow_MenuFindRegex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Help 的本地化字符串。
         /// </summary>
         public static string MainEditWindow_MenuHelp {

@@ -281,12 +281,16 @@ namespace MVPlot.Windows
         private void Undo()
         {
             OperationManager.Undo();
+            IsSaved = false;
+            OnPropertyChanged(nameof(WindowTitle));
         }
 
         [RelayCommand]
         private void Redo()
         {
             OperationManager.Redo();
+            IsSaved = false;
+            OnPropertyChanged(nameof(WindowTitle));
         }
 
         private bool SelectedPlotRowCheck()
@@ -363,6 +367,28 @@ namespace MVPlot.Windows
         }
 
         [RelayCommand]
+        private void FindRegex()
+        {
+            string query = DialogUtility.ShowInputString(LanguageManager.Instance["MainEditWindow_FindWindowTitle"]!, LanguageManager.Instance["MainEditWindow_FindTitle"]!);
+            for (int i = PlotListSelectedIndex == -1 ? 0 : PlotListSelectedIndex; i < PlotProjectManager.CurrentProject!.Plots.Count; i++)
+            {
+                for (int j = PlotRowListSelectedIndex == -1 ? 0 : PlotRowListSelectedIndex; j < PlotProjectManager.CurrentProject!.Plots[i].Rows.Count; j++)
+                {
+                    foreach (var bs in PlotProjectManager.CurrentProject!.Plots[i].Rows[j].Content)
+                    {
+                        if (Regex.IsMatch(bs.ToString(Encoding.Default),query))
+                        {
+                            PlotListSelectedIndex = i;
+                            PlotRowListSelectedIndex = j;
+                            return;
+                        }
+                    }
+                }
+            }
+            HandyControl.Controls.MessageBox.Show(LanguageManager.Instance["MainEditWindow_FindNothing"]!, LanguageManager.Instance["Information"]!, MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        [RelayCommand]
         private void NewPlot()
         {
             AddPlot();
@@ -402,6 +428,7 @@ namespace MVPlot.Windows
             do
             {
                 condition = DialogUtility.ShowInputString(LanguageManager.Instance["MainEditWindow_ChangeConditionWindowTitle"]!, LanguageManager.Instance["MainEditWindow_ChangeConditionTitle"]!);
+                if (condition == string.Empty) return;
                 if (PlotConditionCheck().IsMatch(condition))
                 {
                     HandyControl.Controls.MessageBox.Show(LanguageManager.Instance["MainEditWindow_ConditionInvalid"]!, LanguageManager.Instance["Warning"]!, MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -780,33 +807,45 @@ namespace MVPlot.Windows
                 PlotConditionList.Add(item);
             }
             OnPropertyChanged(nameof(SelectedPlot));
+            InsertPlotConditionCommand.NotifyCanExecuteChanged();
         }
+
+        bool operateLock;
 
         partial void OnPlotRowListSelectedIndexChanging(int oldValue, int newValue)
         {
+            if (operateLock) return;
             if (ForwardToFlag)
             {
+                operateLock = true;
                 PlotRow row = PlotRowList[oldValue];
                 int index1 = oldValue;
                 int index2 = newValue;
+                if (index2 > index1) index2--;
                 PlotRowList.Remove(row);
                 PlotProjectManager.CurrentProject!.Plots[PlotListSelectedIndex].Rows.Remove(row);
                 PlotRowList.Insert(index2, row);
                 PlotProjectManager.CurrentProject!.Plots[PlotListSelectedIndex].Rows.Insert(index2, row);
                 MovePlotRowUserOperation operation = new(this, row, PlotListSelectedIndex, index1, index2);
                 OperationManager.Add(operation);
+                ForwardToFlag = false;
+                operateLock = false;
             }
             if (BackwardToFlag)
             {
+                operateLock = true;
                 PlotRow row = PlotRowList[oldValue];
                 int index1 = oldValue;
                 int index2 = newValue + 1;
+                if (index2 > index1) index2--;
                 PlotRowList.Remove(row);
                 PlotProjectManager.CurrentProject!.Plots[PlotListSelectedIndex].Rows.Remove(row);
                 PlotRowList.Insert(index2, row);
                 PlotProjectManager.CurrentProject!.Plots[PlotListSelectedIndex].Rows.Insert(index2, row);
                 MovePlotRowUserOperation operation = new(this, row, PlotListSelectedIndex, index1, index2);
                 OperationManager.Add(operation);
+                BackwardToFlag = false;
+                operateLock = false;
             }
         }
 
@@ -823,8 +862,6 @@ namespace MVPlot.Windows
             AppendPastePlotRowCommand.NotifyCanExecuteChanged();
             OverwriteFlag = false;
             InsertFlag = false;
-            ForwardToFlag = false;
-            BackwardToFlag = false;
         }
 
         partial void OnMainSender_NormalPlotRowContentChanged(string value)

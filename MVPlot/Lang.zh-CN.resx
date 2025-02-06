@@ -405,4 +405,7 @@
   <data name="MainEditWindow_MenuDeleteCondition" xml:space="preserve">
     <value>删除剧本条件</value>
   </data>
+  <data name="MainEditWindow_MenuFindRegex" xml:space="preserve">
+    <value>使用正则表达式查找...</value>
+  </data>
 </root>

@@ -6,11 +6,18 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\MVPlot.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Resources\MVPlot.ico" />
     <None Remove="Resources\SanJiYuanTiJian-Zhong-2.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\MVPlot.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

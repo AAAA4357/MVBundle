@@ -32,6 +32,7 @@
         <KeyBinding Key="A" Modifiers="Ctrl" Command="{Binding SelectAllCommand}"/>
         -->
         <KeyBinding Key="F" Modifiers="Ctrl" Command="{Binding FindCommand}"/>
+        <KeyBinding Key="F" Modifiers="Ctrl+Shift" Command="{Binding FindRegexCommand}"/>
         <KeyBinding Key="N" Modifiers="Ctrl" Command="{Binding NewPlotCommand}"/>
         <KeyBinding Key="D" Modifiers="Ctrl" Command="{Binding DeletePlotCommand}"/>
         <!--
@@ -71,6 +72,7 @@
                 </Grid.RowDefinitions>
                 <TextBlock Text="{Binding [MainEditWIndow_Conditions],Source={x:Static managers:LanguageManager.Instance}}" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" TextAlignment="Center"/>
                 <ListBox SelectedIndex="{Binding PlotConditionSelectedIndex}" ItemsSource="{Binding PlotConditionList}" Margin="160,0,0,0" ScrollViewer.CanContentScroll="False"/>
+                <Button Width="40" Height="40" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" hc:BorderElement.CornerRadius="20" hc:IconElement.Geometry="{StaticResource AddGeometry}" Command="{Binding InsertPlotConditionCommand}" Cursor="Hand"/>
                 <Border Grid.Row="1" Background="{StaticResource Color_Separator}"/>
                 <ListView x:Name="PlotRowListView" Grid.Row="2" ItemsSource="{Binding PlotRowList}" SelectedItem="{Binding PlotRowListSelectedItem}" SelectedIndex="{Binding PlotRowListSelectedIndex}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="-61,0,0,0" VirtualizingPanel.IsVirtualizing="True">
                     <ListView.ItemTemplate>
@@ -127,19 +129,19 @@
                                                         <MenuItem Header="{Binding [MainEditWindow_PlotRowList_Delete], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding DeletePlotRowCommand}"/>
                                                         <MenuItem Header="{Binding [MainEditWindow_PlotRowList_Overwrite], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding OverwritePlotRowCommand}"/>
                                                         <Separator Background="{DynamicResource Color_Divider}"/>
-                                                        <MenuItem IsEnabled="False" Header="{Binding [MainEditWindow_PlotRowList_Move], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Background="{DynamicResource Color_Background}">
+                                                        <MenuItem Header="{Binding [MainEditWindow_PlotRowList_Move], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Background="{DynamicResource Color_Background}">
                                                             <MenuItem Header="{Binding [MainEditWindow_PlotRowList_MoveForward], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding MoveForwardPlotRowCommand}"/>
                                                             <MenuItem Header="{Binding [MainEditWindow_PlotRowList_MoveBackward], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding MoveBackwardPlotRowCommand}"/>
                                                             <MenuItem Header="{Binding [MainEditWindow_PlotRowList_MoveForwardTo], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding MoveForwardToPlotRowCommand}"/>
                                                             <MenuItem Header="{Binding [MainEditWindow_PlotRowList_MoveBackwardTo], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding MoveBackwardToPlotRowCommand}"/>
                                                         </MenuItem>
                                                         <Separator Background="{DynamicResource Color_Divider}"/>
-                                                        <MenuItem IsEnabled="False" Header="{Binding [MainEditWindow_PlotRowList_Cut], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding CutPlotRowCommand}"/>
-                                                        <MenuItem IsEnabled="False" Header="{Binding [MainEditWindow_PlotRowList_Copy], Source={x:Static managers:LanguageManager.Instance}}" Background="{DynamicResource Color_Background}" Foreground="{DynamicResource Color_UI}">
+                                                        <MenuItem Header="{Binding [MainEditWindow_PlotRowList_Cut], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding CutPlotRowCommand}"/>
+                                                        <MenuItem Header="{Binding [MainEditWindow_PlotRowList_Copy], Source={x:Static managers:LanguageManager.Instance}}" Background="{DynamicResource Color_Background}" Foreground="{DynamicResource Color_UI}">
                                                             <MenuItem Header="{Binding [MainEditWindow_PlotRowList_CopyContent], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding CopyContentPlotRowCommand}"/>
                                                             <MenuItem Header="{Binding [MainEditWindow_PlotRowList_CopyRow], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding CopyPlotRowCommand}"/>
                                                           </MenuItem>
-                                                        <MenuItem IsEnabled="False" Header="{Binding [MainEditWindow_PlotRowList_Paste], Source={x:Static managers:LanguageManager.Instance}}" Background="{DynamicResource Color_Background}" Foreground="{DynamicResource Color_UI}">
+                                                        <MenuItem Header="{Binding [MainEditWindow_PlotRowList_Paste], Source={x:Static managers:LanguageManager.Instance}}" Background="{DynamicResource Color_Background}" Foreground="{DynamicResource Color_UI}">
                                                             <MenuItem Header="{Binding [MainEditWindow_PlotRowList_OverwritePaste], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding OverwritePastePlotRowCommand}"/>
                                                             <MenuItem Header="{Binding [MainEditWindow_PlotRowList_InsertPaste], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding InsertPastePlotRowCommand}"/>
                                                             <MenuItem Header="{Binding [MainEditWindow_PlotRowList_AppendPaste], Source={x:Static managers:LanguageManager.Instance}}" Foreground="{DynamicResource Color_UI}" Command="{Binding AppendPastePlotRowCommand}"/>
@@ -389,7 +391,7 @@
                 <MenuItem Header="{Binding [MainEditWindow_MenuOpen],Source={x:Static managers:LanguageManager.Instance}}" Command="{Binding OpenCommand}" InputGestureText="Ctrl+O"/>
                 <MenuItem Header="{Binding [MainEditWindow_MenuClose],Source={x:Static managers:LanguageManager.Instance}}" Command="{Binding CloseCommand}" InputGestureText="Ctrl+Q"/>
             </MenuItem>
-            <MenuItem IsEnabled="False" Header="{Binding [MainEditWindow_MenuEdit],Source={x:Static managers:LanguageManager.Instance}}">
+            <MenuItem Header="{Binding [MainEditWindow_MenuEdit],Source={x:Static managers:LanguageManager.Instance}}">
                 <MenuItem Header="{Binding [MainEditWindow_MenuUndo],Source={x:Static managers:LanguageManager.Instance}}" Command="{Binding UndoCommand}" InputGestureText="Ctrl+Z"/>
                 <MenuItem Header="{Binding [MainEditWindow_MenuRedo],Source={x:Static managers:LanguageManager.Instance}}" Command="{Binding RedoCommand}" InputGestureText="Ctrl+Y"/>
                 <Separator/>
@@ -402,6 +404,7 @@
                 -->
                 <Separator/>
                 <MenuItem Header="{Binding [MainEditWindow_MenuFind],Source={x:Static managers:LanguageManager.Instance}}" Command="{Binding FindCommand}" InputGestureText="Ctrl+F"/>
+                <MenuItem Header="{Binding [MainEditWindow_MenuFindRegex],Source={x:Static managers:LanguageManager.Instance}}" Command="{Binding FindRegexCommand}" InputGestureText="Ctrl+Shift+F"/>
             </MenuItem>
             <MenuItem Header="{Binding [MainEditWindow_MenuPlot],Source={x:Static managers:LanguageManager.Instance}}">
                 <MenuItem Header="{Binding [MainEditWindow_MenuCreatePlot],Source={x:Static managers:LanguageManager.Instance}}" Command="{Binding NewPlotCommand}" InputGestureText="Ctrl+N"/>
