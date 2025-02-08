@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVEdit", "MVEdit\MVEdit.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCheck", "MVCheck\MVCheck.csproj", "{59AA7500-DBEC-4928-B46A-CFBE16DAB0FB}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MVPlotSetup", "MVPlotSetup\MVPlotSetup.vdproj", "{27798217-D7B7-48BA-E2EB-B4F91F2FF7AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,12 +29,14 @@ Global
 		{59AA7500-DBEC-4928-B46A-CFBE16DAB0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59AA7500-DBEC-4928-B46A-CFBE16DAB0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59AA7500-DBEC-4928-B46A-CFBE16DAB0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27798217-D7B7-48BA-E2EB-B4F91F2FF7AB}.Debug|Any CPU.ActiveCfg = Debug
+		{27798217-D7B7-48BA-E2EB-B4F91F2FF7AB}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_NeutralResourcesLanguage = en-US
 		SolutionGuid = {FF7588C8-969D-4B4C-A806-6295A2B0034F}
+		RESX_NeutralResourcesLanguage = en-US
 	EndGlobalSection
 EndGlobal
